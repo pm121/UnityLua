@@ -13,7 +13,9 @@ def getFile():
     start = len(root_path) + 1
     for root,dirs,files in os.walk(work_path):      
         for file in files:    
-            txt += root[start:] + '=' + file + '\n'
+            if file != 'files.txt':
+                cur_path = root[start:]
+                txt += cur_path.replace('\\','/') + '=' + file + '\n'
     
     f = open(filename,'w')
     f.write(txt)
