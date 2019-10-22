@@ -1,0 +1,3 @@
+-- xlua.hotfix(CS.MainViewHotFix,"Show",function(self)
+--     print("执行lua的Start")
+-- end)
