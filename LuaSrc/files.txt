@@ -1,0 +1,7 @@
+LuaSrc=files.txt
+LuaSrc=hotFix.lua
+LuaSrc=Main.lua
+LuaSrc=ViewBase.lua
+LuaSrc\utils=functions.lua
+LuaSrc\views=MainView.lua
+LuaSrc\views=StartView.lua
