@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 385025737
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: luaab/luascripts.asset
+      Dependencies: {}
