@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3112214595
+CRC: 3372269145
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: d7ede7661379ccef21cd3763fae08a15
+    Hash: 826078269101a69dd035478646f3d5e2
   TypeTreeHash:
     serializedVersion: 2
     Hash: 5ad585dd02dfb5016c0dad519eab8f49
@@ -13,4 +13,5 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/LuaScripts/Main.lua.txt
+- Assets/LuaScripts/hotFix.lua.txt
 Dependencies: []
