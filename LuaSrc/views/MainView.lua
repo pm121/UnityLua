@@ -1,21 +1,26 @@
 local MainView = class("MainView",require("LuaSrc.ViewBase"))
 MainView.VIEW_UI_PREFAB_NAME = "Prefabs/UIPrefabs/MainView/MainView"
 MainView.VIEW_UI_BINDING = {
-    btnBag = {
-        relation = "btnBag",
-        clicked = {type = "Button",func = "btnBagClicked"}
+    txtTitle = {
+        relation = "txtTitle",
+    },
+
+    btnShow = {
+        relation = "btnShow",
+        clicked = {type = "Button",func = "btnShowClicked"}
     },
 }
 
 function MainView:onCreate()
     rawset(_G,self.__cname,self)
-
+    self.txtTitle:GetComponent("UnityEngine.UI.Text").text = "我是标题"
+    -- self.txtTitle.SetActive(false)
     -- self.view:AddComponent(typeof(CS.LuaViewBehaviour))
-    self.view:AddComponent(typeof(CS.MainViewHotFix))
+    -- self.view:AddComponent(typeof(CS.MainViewHotFix))
 end
 
-function MainView:btnBagClicked()
-    require("LuaSrc.views.StartView").createView()
+function MainView:btnShowClicked()
+    self.txtTitle:GetComponent("UnityEngine.UI.Text").text = "我是点击出来的标题"
 end
 
 --cs调lua方法
