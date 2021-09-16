@@ -17,7 +17,7 @@ function ViewBase:createView()
     if not self.VIEW_UI_PREFAB_NAME then
         return
     end
-
+    
     local prefab = csengine.Resources.Load(self.VIEW_UI_PREFAB_NAME)
     self.view = csengine.GameObject.Instantiate(prefab)
 end
@@ -34,7 +34,7 @@ function ViewBase:createViewBinding()
 
         if v.clicked then
             local node = self[k]:GetComponent("UnityEngine.UI."..v.clicked.type)
-            node.onClick:AddListener(self[v.clicked.func])
+            node.onClick:AddListener(handler(self,self[v.clicked.func]))
         end
     end
 end
